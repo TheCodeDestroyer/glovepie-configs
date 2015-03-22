@@ -39,6 +39,8 @@ LT + RB = Escape (cancel)
 
 LT + RT + Back = Cursor/Combat mode
 
+LT = Left click (only in cursor mode)
+
 **** The Sticks ****************************************************************
 
 Left Stick = Arrows (move)
