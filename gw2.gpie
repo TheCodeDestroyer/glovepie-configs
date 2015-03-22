@@ -4,24 +4,24 @@
 /***
 **** Main Buttons **************************************************************
 
-X     = 1 (mainhand spell)
-Y     = 2 (mainhand spell)
-B     = 3 (mainhand spell)
+X     = Q (mainhand spell)
+Y     = E (mainhand spell)
+B     = R (mainhand spell)
 A     = Space (jump)
-Start = M (map)
+Start = I (Inventory)
 Back  = X (sheath / brandish weapon)
 
-RT + X     = 4 (offhand spell)
-RT + Y     = 5 (offhand spell)
-RT + B     = 6 (heal)
+RT + X     = 1 (offhand spell)
+RT + Y     = 2 (offhand spell)
+RT + B     = 3 (heal)
 RT + A     = ----
 RT + Start = ----
 RT + Back  = ----
 
-LT + X     = 7 (skill slot)
-LT + Y     = 8 (skill slot)
-LT + B     = 9 (skill slot)
-LT + A     = 0 (elite skill)
+LT + X     = 4 (skill slot)
+LT + Y     = 5 (skill slot)
+LT + B     = 6 (skill slot)
+LT + A     = T (elite skill)
 LT + Start = ----
 LT + Back  = = (toggle run/walk)
 
@@ -36,6 +36,8 @@ RT + RB = ----
 
 LT + LB = ~ (weapon switch)
 LT + RB = Escape (cancel)
+
+LT + RT + Back = Cursor/Combat mode
 
 **** The Sticks ****************************************************************
 
@@ -214,8 +216,8 @@ Key.F4 = XInput.Down  and var.NoMod;
 ////////////////////////////////////////////////////////////////////////////////
 // commands ////////////////////////////////////////////////////////////////////
 
-// (Start) (map)
-Key.M = XInput.Start              and var.NoMod;
+// (Start) (inventory)
+Key.I = XInput.Start              and var.NoMod;
 
 // (Back) (sheath / brandish)
 Key.X = XInput.Back               and var.NoMod;
@@ -252,6 +254,19 @@ Key.PageUp = XInput.LeftThumb     and var.LeftMod;
 
 // [LT]+(RS) (zoom out)
 Key.PageDown = XInput.RightThumb  and var.LeftMod;
+
+if XInput.Start then;
+   //map
+   Key.M = XInput.Back;
+   //hero
+   Key.H = XInput.Down;
+   //guild
+   Key.G = XInput.Left;
+   //wvw
+   Key.B = XInput.Right;
+   //mail
+   Key.J = XInput.Up;
+endif
 
 
 ////////////////////////////////////////////////////////////////////////////////
